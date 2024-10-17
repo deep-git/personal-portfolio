@@ -27,7 +27,7 @@ const ScrollingText = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [currentIndex]);
+    }, [currentIndex, handleScroll]);
 
     return (
         <div className="relative mx-5 xl:mx-40 flex flex-col xl:flex-row items-center gap-10 w-full xl:overflow-hidden">
