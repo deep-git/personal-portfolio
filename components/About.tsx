@@ -4,6 +4,7 @@ import { BiGlobe, BiHeart, BiPalette, BiRocket, BiUser } from 'react-icons/bi'
 import { BsTools } from 'react-icons/bs'
 import { FaGraduationCap } from 'react-icons/fa'
 import { FaArrowsRotate } from 'react-icons/fa6'
+import Image from 'next/image'
 
 const About = () => {
     return (
@@ -40,7 +41,7 @@ const About = () => {
                 </div>
 
                 <div className="relative mx-auto lg:absolute w-[200px] h-[200px] bg-light_gray_3 rounded-2xl lg:mx-0 lg:top-[calc(50%-100px)] lg:left-[calc(40%-110px)] xl:left-[calc(40%-140px)] p-4 overflow-hidden">
-                    <img src="/images/profile.png" alt="profile" className="w-full h-full object-cover object-center rounded-2xl" />
+                    <Image src="/images/profile.png" alt="profile" width={200} height={200} className="w-full h-full object-cover object-center rounded-2xl" />
                 </div>
 
                 <div className="w-full lg:w-3/5 bg-white px-5 py-4 sm:p-10 rounded-2xl">

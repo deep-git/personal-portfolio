@@ -6,6 +6,7 @@ import { IconType } from 'react-icons';
 import { BsGithub } from 'react-icons/bs';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
+import Image from 'next/image';
 
 interface ProjectNavbarProps {
     project?: {
@@ -63,7 +64,7 @@ const ProjectNavbar = ({ project }: ProjectNavbarProps) => {
                             <span className="text-white text-[24px] md:text-[32px] mt-1 px-4 md:px-0 line-clamp-3">{project.type}</span>
 
                             <div className="flex md:hidden relative w-full h-[300px] mt-10">
-                                <img src={project.projectImg} alt={project.title} className="w-full md:w-[400px] ml-auto h-full object-cover object-center" />
+                                <Image src={project.projectImg} alt={project.title} width={400} height={300} className="w-full md:w-[400px] ml-auto h-full object-cover object-center" />
                                 <div className="absolute top-0 left-0 w-full h-full bg-black_background/50">
                                     <div className="flex items-center gap-3 absolute top-5 right-5">
                                         <Link href={project.github} target="_blank" className="bg-white p-2 rounded-full hover:bg-mainbackground_gray transition duration-100">
@@ -114,7 +115,7 @@ const ProjectNavbar = ({ project }: ProjectNavbarProps) => {
                         </div>
 
                         <div className="hidden md:flex relative w-[300px] lg:w-[400px] h-full">
-                            <img src={project.projectImg} alt={project.title} className="w-[300px] lg:w-[400px] ml-auto h-full object-cover object-center" />
+                            <Image src={project.projectImg} alt={project.title} width={400} height={400} className="w-[300px] lg:w-[400px] ml-auto h-full object-cover object-center" />
                             <div className="absolute top-0 left-0 w-full h-full bg-black_background/50" />
                         </div>
                     </div>

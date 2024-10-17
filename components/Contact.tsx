@@ -7,6 +7,7 @@ import IconButtons from './buttons/IconButtons';
 import { BiMailSend } from 'react-icons/bi';
 import { sendContactForm } from '@/lib/api';
 import Spinner from './Spinner';
+import Image from 'next/image';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -120,7 +121,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-col px-4 md:px-10 lg:px-0 lg:ml-10 xl:ml-32 gap-2 w-full lg:w-[400px]">
                 <div className="flex items-center gap-3">
-                    <img src="/icons/main/hello.png" alt="hand wave" className="w-10 h-10" />
+                    <Image src="/icons/main/hello.png" alt="hand wave" width={40} height={40} className="w-10 h-10" />
                     <span className="text-[24px]">Get in Touch!</span>
                 </div>
                 <p className="text-[16px]">I’d love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out. Your messages are always welcome, and I’ll do my best to get back to you as soon as possible. Let’s connect!</p>

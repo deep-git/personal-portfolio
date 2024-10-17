@@ -1,6 +1,7 @@
 import ProjectNavbar from '@/components/navbar/ProjectNavbar';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { featuredProject } from '@/constants';
+import Image from 'next/image';
 import React from 'react'
 
 const page = ({ params }: { params: { title: string } }) => {
@@ -90,7 +91,7 @@ const page = ({ params }: { params: { title: string } }) => {
                             <p className="w-full max-w-[400px] mt-2 text-[16px]">Structural map detailing how the frontend and backend are integrated and how various components interact with each other through user actions.</p>
                             <div className="flex items-center gap-5 mt-10">
                                 {/* <img src={getProject.entity_map} alt="Entity map" className="w-[700px] h-[600px]" /> */}
-                                <img src={getProject.object_map} alt="Object map" className="w-full md:w-[750px] md:h-[600px]" />
+                                <Image src={getProject.object_map} alt="Object map" width={750} height={750} className="w-full md:w-[750px] md:h-[600px]" />
                             </div>
                         </div>
 
@@ -105,7 +106,7 @@ const page = ({ params }: { params: { title: string } }) => {
                                                 <p className={`w-full max-w-[700px] ${design.num % 2 === 1 ? "md:ml-auto md:text-right" : "md:mr-auto md:text-left"} text-wrap text-[16px]`}>{design.description}</p>
                                             </div>
                                             <div className="w-full mt-5">
-                                                <img src={design.image} alt={design.title} className="w-full max-w-[900px]" />
+                                                <Image src={design.image} alt={design.title} width={1000} height={1000} className="w-full max-w-[900px]" />
                                             </div>
                                         </div>
                                     </div>

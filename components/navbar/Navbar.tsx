@@ -2,6 +2,7 @@ import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from '../ui/menubar';
+import Image from 'next/image';
 
 const Navbar = () => {
 
@@ -18,7 +19,7 @@ const Navbar = () => {
                         Projects
                     </span>
                 </Link>
-                <img src="/logo.png" alt="" className="absolute" />
+                <Image src="/logo.png" alt="" width={60} height={60} className="absolute" />
                 <Link href="#about" className="pl-10">
                     <span className="hover:text-purple transition duration-100">
                         About
@@ -32,7 +33,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex sm:hidden relative justify-between items-center w-full h-full gap-10 bg-light_gray_2 px-5 py-2">
-                <img src="/logo.png" alt="" className="sm:absolute" />
+                <Image src="/logo.png" alt="" width={45} height={45} className="sm:absolute" />
                 <Menubar className="bg-light_gray_2">
                     <MenubarMenu>
                         <MenubarTrigger className="bg-light_gray_2">

@@ -10,6 +10,7 @@ import ScrollingText from "@/components/ScrollingText";
 import Skills from "@/components/Skills";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ArrowUp } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { BiDownload } from "react-icons/bi";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -25,7 +26,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row px-4 sm:px-10 lg:px-0 max-w-[900px] mt-5 lg:mt-0 gap-5 lg:gap-20">
             <div className="flex items-center md:items-start gap-3">
               <p className="text-[32px] sm:text-[40px]">Hi!</p>
-              <img src="/icons/main/hello.png" alt="" className="w-12 h-12" />
+              <Image src="/icons/main/hello.png" alt="" width={48} height={48} className="w-12 h-12" />
             </div>
             <p className="text-[28px] sm:text-[32px] md:text-[40px]">My name is Deepak, a passionate entry-level software developer!</p>
           </div>

@@ -1,11 +1,10 @@
-"use client";
-
 import React, { useState } from 'react';
 import { IconType } from 'react-icons';
 import { BsGithub } from 'react-icons/bs';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import Link from 'next/link';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
+import Image from 'next/image';
 
 interface ProjectCardProps {
     project: {
@@ -21,12 +20,10 @@ interface ProjectCardProps {
 
 const DesignCard = ({ project }: ProjectCardProps) => {
 
-    const [hoverShow, setHoverShow] = useState(false);
-
     return (
-        <div onMouseEnter={() => setHoverShow(true)} onMouseLeave={() => setHoverShow(false)} className="flex flex-col gap-2 bg-mainbackground_gray w-[300px] xl:w-[350px] h-max max-h-[500px] rounded-md overflow-hidden border border-light_gray_3">
+        <div className="flex flex-col gap-2 bg-mainbackground_gray w-[300px] xl:w-[350px] h-max max-h-[500px] rounded-md overflow-hidden border border-light_gray_3">
             <div className="relative w-full h-[150px] sm:h-[200px] overflow-hidden">
-                <img src={project.projectImg} alt={project.title} className="w-full h-full object-cover object-center select-none" />
+                <Image src={project.projectImg} alt={project.title} width={400} height={400} className="w-full h-full object-cover object-center select-none" />
                 <div className="absolute top-0 left-0 w-full h-full bg-black/30 p-3">
                     <div className="flex justify-end items-center w-full gap-3">
                         <Link href={project.github} target="_blank" className="bg-white rounded-lg p-1 active:scale-95 hover:bg-mainbackground_gray transition duration-100">

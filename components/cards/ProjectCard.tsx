@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '../ui/hover-card'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip'
 import { projectWorkedOnSkills } from '@/constants'
+import Image from 'next/image'
 
 interface ProjectCardProps {
     project: {
@@ -24,7 +25,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     return (
         <div className="flex flex-col gap-2 bg-mainbackground_gray w-full max-w-[350px] max-h-[500px] rounded-md overflow-hidden border border-light_gray_3">
             <div className="relative w-full h-[200px] overflow-hidden">
-                <img src={project.projectImg} alt={project.title} className="w-full h-full object-cover object-center select-none" />
+                <Image src={project.projectImg} alt={project.title} width={600} height={600} className="w-full h-full object-cover object-center select-none" />
                 <div className="absolute top-0 left-0 w-full h-full bg-black/30 p-3">
                     <div className="flex justify-end items-center w-full gap-3">
                         <Link href={project.github} target="_blank" className="bg-white rounded-lg p-1 active:scale-95 hover:bg-mainbackground_gray transition duration-100 border-[2px] border-black_background">
