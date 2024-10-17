@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IconType } from 'react-icons';
 import { BsGithub } from 'react-icons/bs';
 import { FaExternalLinkAlt } from 'react-icons/fa';

@@ -5,7 +5,7 @@ import { IconType } from 'react-icons';
 
 interface ProjectCardProps {
     project: {
-        id: Number,
+        id: number,
         title: string;
         type: string;
         projectImg: string;
@@ -17,7 +17,7 @@ interface ProjectCardProps {
         view_link: string;
         completedBy: string;
         objectives: {
-            num: Number;
+            num: number;
             title: string;
             details: string;
             Icon: IconType;
@@ -25,14 +25,14 @@ interface ProjectCardProps {
         purpose: {
             description: string;
             purpose_list: {
-                num: Number;
+                num: number;
                 title: string;
                 details: string;
                 Icon: IconType;
             }[];
         };
         design_objectives: {
-            num: Number;
+            num: number;
             title: string;
             description: string;
             image: string;
@@ -41,7 +41,7 @@ interface ProjectCardProps {
         object_map: string;
         tag: string;
     },
-    num: Number;
+    num: number;
 }
 
 const FeaturedCard = ({ project, num }: ProjectCardProps) => {

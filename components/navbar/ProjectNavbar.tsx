@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 interface ProjectNavbarProps {
     project?: {
-        id: Number,
+        id: number,
         title: string;
         type: string;
         projectImg: string;
@@ -22,7 +22,7 @@ interface ProjectNavbarProps {
         view_link: string;
         completedBy: string;
         objectives: {
-            num: Number;
+            num: number;
             title: string;
             details: string;
             Icon: IconType;
@@ -30,14 +30,14 @@ interface ProjectNavbarProps {
         purpose: {
             description: string;
             purpose_list: {
-                num: Number;
+                num: number;
                 title: string;
                 details: string;
                 Icon: IconType;
             }[];
         };
         design_objectives: {
-            num: Number;
+            num: number;
             title: string;
             description: string;
             image: string;
